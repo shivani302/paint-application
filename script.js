@@ -1,4 +1,3 @@
-console.log('Hello World');
 var isPenActive = false;
 var isDrawing = false;
 var canvas = document.getElementById("myCanvas");
@@ -8,12 +7,12 @@ var startX, startY, currentX, currentY;
 
 function selectPen(){
     isPenActive = true;
-    console.log("Pen is active now");
+    // console.log("Pen is active now");
 }
 
 function selectEraser(){
     isPenActive = false;
-    console.log("Eraser is active now");
+    // console.log("Eraser is active now");
 }
 
 function clearCanvas(){
@@ -23,7 +22,7 @@ function clearCanvas(){
 }
 
 function draw(e){
-    console.log("Drawing");
+    // console.log("Drawing");
     if( !isDrawing ){
         return;
     }
@@ -49,12 +48,12 @@ canvas.addEventListener("mousedown", (e)=>{
     isDrawing = true;
     startX = e.offsetX;
     startY = e.offsetY;
-    console.log("user clicked the mouse inside canvas, might be he would drag to draw, so enable the pen");
+    // console.log("user clicked the mouse inside canvas, might be he would drag to draw, so enable the pen");
 });
 canvas.addEventListener("mousemove", e=>{
     draw(e);
 });
 canvas.addEventListener("mouseup", ()=>{
     isDrawing = false;
-    console.log("user released the mouse inside canvas, disable the pen");
+    // console.log("user released the mouse inside canvas, disable the pen");
 } );
